@@ -26,6 +26,7 @@ if (fs.existsSync(jsonPath)) {
 		port: Number(env('PORT', jsonConfig.port)),
 		cron: env('CRON', jsonConfig.cron),
 		chromeLaunchConfig: jsonConfig.chromeLaunchConfig || {},
+		runners: jsonConfig.runners || ["htmlcs"],
 		numWorkers: jsonConfig.numWorkers || 2
 	};
 } else {
@@ -35,6 +36,7 @@ if (fs.existsSync(jsonPath)) {
 		port: Number(env('PORT', '3000')),
 		cron: env('CRON', false),
 		chromeLaunchConfig: {},
+		runners: ["htmlcs"],
 		numWorkers: Number(env('NUM_WORKERS', '2'))
 	};
 }
