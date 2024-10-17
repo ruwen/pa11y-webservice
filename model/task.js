@@ -37,7 +37,6 @@ module.exports = function(app, callback) {
 
 				return model.collection.insertOne(newTask)
 					.then(result => {
-						console.log(result);
 						return model.prepareForOutput(result.ops[0]);
 					})
 					.catch(error => {

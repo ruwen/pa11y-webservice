@@ -37,6 +37,7 @@ module.exports = function({db}, callback) {
 				}
 				return collection.insertOne(newResult)
 					.then(result => {
+						console.log(result);
 						return model.prepareForOutput(result.ops[0]);
 					})
 					.catch(error => {
