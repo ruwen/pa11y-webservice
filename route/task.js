@@ -152,7 +152,7 @@ module.exports = function({model, server}) {
 				grey('Finished running one-off task @ %s'),
 				new Date()
 			);
-			return reply.response().code(202);
+			return reply.response(executed).code(202);
 		},
 		options: {
 			validate: {
