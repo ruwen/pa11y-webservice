@@ -184,6 +184,7 @@ module.exports = function(app, callback) {
 						ignore: task.ignore,
 						actions: task.actions || [],
 						chromeLaunchConfig: app.config.chromeLaunchConfig || {},
+						runner: app.config.runner || ["htmlcs"],
 						headers: task.headers || {},
 						log: {
 							debug: model.pa11yLog(task.id),
