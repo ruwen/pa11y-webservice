@@ -1,5 +1,5 @@
 services:
-  pa11ly:
+  pa11y:
     build:
       dockerfile: Dockerfile
     environment:
