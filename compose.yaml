@@ -4,11 +4,12 @@ services:
       dockerfile: Dockerfile
     environment:
       - NODE_ENV=production
+      - DATABASE=mongodb://mongodb/pa11y-webservice
     ports:
       - 3000:3000
     depends_on:
-      - mongo
-  mongo:
+      - mongodb
+  mongodb:
     image: mongo
     expose:
       - 27017
